@@ -1,13 +1,4 @@
-const db = require("./postgres-config");
-const Pool = require("pg").Pool;
-
-const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "world",
-  password: "4128",
-  port: 5432,
-});
+const { pool } = require("./postgres-config");
 
 const insertCountries = (request, response) => {
   const countriesData = request.body; // Assuming the data is sent in the request body
